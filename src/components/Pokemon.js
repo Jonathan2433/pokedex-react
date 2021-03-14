@@ -5,13 +5,12 @@ import { isEmpty } from "./Utils";
 
 const Pokemon = ({ pokemon }) => {
   const [data, setData] = useState([""]);
-
   useEffect(() => {
     axios.get(pokemon.url).then((res) => setData(res.data));
   }, []);
   // console.log(data.types['0'].type.name);
   return (
-    <article className="pokemon">
+    <article id={data.id} className="pokemon">
       <header className="header-pokemon">
         <h2>{data.name}</h2>
         <h4>#{data.id}</h4>

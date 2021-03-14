@@ -4,7 +4,6 @@ import Pokemon from "./Pokemon";
 
 const Pokedex = () => {
   const [data, setData] = useState([""]);
-
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=151")
